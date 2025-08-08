@@ -1,19 +1,26 @@
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
+import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js';
+import { RGBShiftShader } from 'three/examples/jsm/shaders/RGBShiftShader.js';
 import './style.css';
 import * as THREE from 'three';
 
 //scene
 const scene = new THREE.Scene();
+
+
 //camera
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);
+const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 100);
 camera.position.z = 4;
+
 
 //renderer
 const renderer = new THREE.WebGLRenderer({
     canvas : document.querySelector('canvas'),
     antialias: true,
+    alpha: true,
 });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -21,8 +28,30 @@ renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1;
 renderer.outputEncoding = THREE.sRGBEncoding;
 
+
+
+// Post-processing setup
+const composer = new EffectComposer(renderer);
+const renderPass = new RenderPass(scene, camera);
+composer.addPass(renderPass);
+
+
+
+// RGB Shift effect
+const rgbShiftPass = new ShaderPass(RGBShiftShader);
+rgbShiftPass.uniforms.amount.value = 0.003; 
+rgbShiftPass.uniforms.angle.value = 0.5; 
+composer.addPass(rgbShiftPass);
+
+
+let model;
+
+
 const pmremGenerator = new THREE.PMREMGenerator(renderer);
 pmremGenerator.compileEquirectangularShader();
+
+
+
 
 
 new RGBELoader().load('https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/pond_bridge_night_1k.hdr', function(texture){
@@ -33,23 +62,26 @@ new RGBELoader().load('https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/pond
 
     const loader = new GLTFLoader();
     loader.load('public/DamagedHelmet.gltf', function(gltf){
-        scene.add(gltf.scene);
+        model = gltf.scene;
+        scene.add(model);
     },undefined,function(error){
         console.error('An error happened',error);
     });
 });
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
-    // controls.dampingFactor = 0.05;
-    controls.enableZoom = true;
-    controls.enablePan = true;
-    controls.enableRotate = true;
-    controls.update();
 
+window.addEventListener('mousemove',(event)=>{
+    if(model){
+});
 
+window.addEventListener('resize',()=>{
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    composer.setSize(window.innerWidth, window.innerHeight);
+});
 
 function animate(){
     window.requestAnimationFrame(animate);
-    renderer.render(scene, camera);
+    composer.render(); 
 }
 animate();
