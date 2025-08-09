@@ -5,20 +5,20 @@
 **Immersive Cyberpunk Experience. Powered by WebGL.**
 A futuristic 3D web experience featuring interactive models, smooth animations, and cinematic visuals crafted for exploration and engagement.
 
----
+
 
 ## 🌐 Live Demo
 
 [View Live Website](https://cyberpunk-3-d-project.vercel.app/)
 
----
+
 
 ##  Project Overview
 
 Cyberpunk 3D Project is an interactive and visually rich web experience built using **React**, **Three.js**, **GSAP**, and **Locomotive Scroll**.
 This project showcases a detailed cyberpunk helmet rendered in real-time, enhanced with animations and smooth-scrolling effects, bringing a high-tech, sci-fi feel to the browser.
 
----
+
 
 ##  Features
 
@@ -30,7 +30,7 @@ This project showcases a detailed cyberpunk helmet rendered in real-time, enhanc
 * **Responsive Design** powered by Tailwind CSS
 * **Optimized Lighting & Textures** for realistic visuals
 
----
+
 
 ## Tech Stack
 
@@ -41,7 +41,6 @@ This project showcases a detailed cyberpunk helmet rendered in real-time, enhanc
 * **Tailwind CSS** – Utility-first styling
 * **HDRI Lighting** – Realistic reflections & ambient light
 
----
 
 
 ##  Credits
@@ -49,7 +48,6 @@ This project showcases a detailed cyberpunk helmet rendered in real-time, enhanc
 * **3D Model:** [Threejs](https://threejs.org/examples/?q=postproc#webgl_postprocessing_3dlut)
 * **Developed by:** [Ahasanul Monir Adar](https://www.linkedin.com/in/ahasanul-monir-adar-8b8464274/)
 
----
 
 ## 📬 Contact
 
