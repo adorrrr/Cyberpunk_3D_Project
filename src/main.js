@@ -7,7 +7,27 @@ import { RGBShiftShader } from 'three/examples/jsm/shaders/RGBShiftShader.js';
 import './style.css';
 import * as THREE from 'three';
 import { rotate } from 'three/tsl';
-import gsap from 'gsap'; 
+import gsap from 'gsap';
+import LocomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
+
+// Initialize Locomotive Scroll
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    lerp: 0.1,
+    multiplier: 0.5,
+    smartphone: {
+        smooth: true,
+        lerp: 0.1,
+        multiplier: 0.5,
+    },
+    tablet: {
+        smooth: true,
+        lerp: 0.1,
+        multiplier: 0.5,
+    }
+});
 
 //scene
 const scene = new THREE.Scene();
@@ -72,8 +92,8 @@ new RGBELoader().load('https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/pond
 
 window.addEventListener('mousemove',(event)=>{
     if(model){
-        const rotationX = (event.clientX / window.innerWidth - .5) * (Math.PI * .12);
-        const rotationY = (event.clientY / window.innerHeight - .5) * (Math.PI * .12);
+        const rotationX = (event.clientX / window.innerWidth - .5) * (Math.PI * .2);
+        const rotationY = (event.clientY / window.innerHeight - .5) * (Math.PI * .2);
         
         gsap.to(model.rotation, {
             y: rotationX,
