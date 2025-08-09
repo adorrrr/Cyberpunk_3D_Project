@@ -13,14 +13,14 @@ A futuristic 3D web experience featuring interactive models, smooth animations, 
 
 ---
 
-## 📖 Project Overview
+##  Project Overview
 
 Cyberpunk 3D Project is an interactive and visually rich web experience built using **React**, **Three.js**, **GSAP**, and **Locomotive Scroll**.
 This project showcases a detailed cyberpunk helmet rendered in real-time, enhanced with animations and smooth-scrolling effects, bringing a high-tech, sci-fi feel to the browser.
 
 ---
 
-## ✨ Features
+##  Features
 
 * **3D Rendering** with HDR environment maps
 * **GLTF Model Loading** for optimized asset handling
@@ -44,7 +44,7 @@ This project showcases a detailed cyberpunk helmet rendered in real-time, enhanc
 ---
 
 
-## 👨‍💻 Credits
+##  Credits
 
 * **3D Model:** [Threejs](https://threejs.org/examples/?q=postproc#webgl_postprocessing_3dlut)
 * **Developed by:** [Ahasanul Monir Adar](https://www.linkedin.com/in/ahasanul-monir-adar-8b8464274/)
