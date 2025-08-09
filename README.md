@@ -1,6 +1,6 @@
 # Cyberpunk 3D Project – Interactive Web Experience
 
-<img src="https://your-screenshot-link.png" alt="Cyberpunk 3D Project Preview"/>
+<img src="https://res.cloudinary.com/dphnu6u05/image/upload/v1754727173/Screenshot_2025-08-09_135010_y0l6nf.png" alt="Cyberpunk 3D Project Preview"/>
 
 **Immersive Cyberpunk Experience. Powered by WebGL.**
 A futuristic 3D web experience featuring interactive models, smooth animations, and cinematic visuals—crafted for exploration and engagement.
