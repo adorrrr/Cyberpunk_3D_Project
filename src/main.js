@@ -6,6 +6,8 @@ import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js';
 import { RGBShiftShader } from 'three/examples/jsm/shaders/RGBShiftShader.js';
 import './style.css';
 import * as THREE from 'three';
+import { rotate } from 'three/tsl';
+import gsap from 'gsap'; 
 
 //scene
 const scene = new THREE.Scene();
@@ -13,8 +15,7 @@ const scene = new THREE.Scene();
 
 //camera
 const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 100);
-camera.position.z = 4;
-
+camera.position.z = 4;12
 
 //renderer
 const renderer = new THREE.WebGLRenderer({
@@ -71,6 +72,16 @@ new RGBELoader().load('https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/pond
 
 window.addEventListener('mousemove',(event)=>{
     if(model){
+        const rotationX = (event.clientX / window.innerWidth - .5) * (Math.PI * .12);
+        const rotationY = (event.clientY / window.innerHeight - .5) * (Math.PI * .12);
+        
+        gsap.to(model.rotation, {
+            y: rotationX,
+            x: rotationY,
+            duration: 0.9,
+            ease: "power2.out"
+        });
+    }
 });
 
 window.addEventListener('resize',()=>{

@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="https://cdn.tailwindcss.com" defer></script>
 </head>
+
 <body>
-  <div class="main w-full">
-    <div class="w-full h-screen overflow-hidden">
+  <div class="main w-full font-sans">
+    <nav class="w-full fixed top-0 left-0 px-10 py-3 flex justify-between items-center ">
+      <img class="w-[100px] mix-blend-screen filter saturate-150 contrast-125 "  src="https://preview.redd.it/3d-rendered-the-cyberpunk-logo-using-blender-v0-khopj82wqee91.png?width=640&crop=smart&auto=webp&s=8c31445d1ee6f6993331b7d7d11bad170086631c" alt="">
+      <div class="flex gap-5 items-center">
+        <a href="#" class=" tracking-tight text-white hover:text-blue-500 transition-colors duration-300 font-semibold">Games</a>
+        <a href="#" class=" tracking-tight text-white hover:text-blue-500 transition-colors duration-300 font-semibold">News</a>
+        <a href="#" class=" tracking-tight text-white hover:text-blue-500 transition-colors duration-300 font-semibold">Reviews</a>
+        <a href="#" class=" tracking-tight text-white hover:text-blue-500 transition-colors duration-300 font-semibold">Community</a>
+        <a href="#" class="tracking-tight text-white hover:text-blue-500 transition-colors duration-300 font-semibold">Store</a>
+        <a href="#" class="tracking-tight text-white hover:text-blue-500 transition-colors duration-300 font-semibold">Support</a>
+      </div>
+    </nav>
+    <div class="w-full h-[150vh] overflow-hidden">
+      <img class="absolute w-3/4 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-screen filter saturate-150 contrast-125 " src="https://preview.redd.it/3d-rendered-the-cyberpunk-logo-using-blender-v0-khopj82wqee91.png?width=640&crop=smart&auto=webp&s=8c31445d1ee6f6993331b7d7d11bad170086631c"
+        alt="">
+      <div class="w-[40rem] h-[40rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[-1] rounded-full bg-blue-800 blur-[90px]"></div>
       <canvas id="canvas"></canvas>
     </div>
-    <div class="w-full h-screen bg-zinc-900"></div>
+    <div class="w-full h-screen relative bg-white">
+      <div class="w-full h-96 absolute -translate-y-1/2  top-0 left-0  bg-gradient-to-b from-black to-white"></div>
+     </div>
   </div>
 
   <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
