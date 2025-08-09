@@ -32,7 +32,7 @@ This project showcases a detailed cyberpunk helmet rendered in real-time, enhanc
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 * **React (Vanilla)** – Frontend Framework
 * **Three.js** – 3D graphics rendering
