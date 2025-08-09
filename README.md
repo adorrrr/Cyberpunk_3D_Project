@@ -9,7 +9,7 @@ A futuristic 3D web experience featuring interactive models, smooth animations, 
 
 ## 🌐 Live Demo
 
-<img src="https://res.cloudinary.com/dphnu6u05/image/upload/v1754727308/live-stream_18429699_dkfu0i.png" alt="Cyberpunk 3D Project Preview" width="400"/> [View Live Website](https://cyberpunk-3-d-project.vercel.app/)
+[<img src="https://res.cloudinary.com/dphnu6u05/image/upload/v1754727308/live-stream_18429699_dkfu0i.png" alt="Cyberpunk 3D Project Preview" width="100"/> ] (https://cyberpunk-3-d-project.vercel.app/)
 
 ---
 
