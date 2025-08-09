@@ -46,7 +46,7 @@ This project showcases a detailed cyberpunk helmet rendered in real-time, enhanc
 
 ## 👨‍💻 Credits
 
-* **3D Model:** \[Your model source or artist name]
+* **3D Model:** [Threejs](https://threejs.org/examples/?q=postproc#webgl_postprocessing_3dlut)
 * **Developed by:** [Ahasanul Monir Adar](https://www.linkedin.com/in/ahasanul-monir-adar-8b8464274/)
 
 ---
@@ -56,7 +56,3 @@ This project showcases a detailed cyberpunk helmet rendered in real-time, enhanc
 📧 Email: [ahasanulmoniradar@gmail.com](mailto:ahasanulmoniradar@gmail.com)
 🔗 LinkedIn: [Ahasanul Monir Adar](https://www.linkedin.com/in/ahasanul-monir-adar-8b8464274/)
 
----
-
-If you want, I can also **add a “Getting Started” section** so others can clone and run the project locally. That makes it more professional for GitHub.
-Do you want me to add that?
